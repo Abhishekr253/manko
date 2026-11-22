@@ -23,8 +23,8 @@ function Home() {
 
   useEffect(() => {
     const observerOptions = {
-            threshold: 0.1, 
-      rootMargin: '0px 0px -50px 0px'
+      threshold: 0.1,
+      rootMargin: "0px 0px -50px 0px",
     };
 
     const storyObserver = new IntersectionObserver(([entry]) => {
@@ -85,7 +85,9 @@ function Home() {
                   src={ForManko}
                   alt="Manko"
                   className={`transition-all duration-300 ${
-                    isScrolled ? "w-12 h-12 md:w-16 md:h-16" : "w-16 h-16 md:w-20 md:h-20"
+                    isScrolled
+                      ? "w-12 h-12 md:w-16 md:h-16"
+                      : "w-16 h-16 md:w-20 md:h-20"
                   } rounded shadow cursor-pointer`}
                   onClick={scrollToTop}
                 />
@@ -216,8 +218,7 @@ function Home() {
             >
               View Our Menu
             </button>
-            <div className="md:hidden mt-8 px-6 py-3 hover:text-gray-500 text-white font-bold rounded-full transition-all duration-300 animate-fadeIn delay-200 text-sm md:text-base"
->
+            <div className="md:hidden mt-8 px-6 py-3 hover:text-gray-500 text-white font-bold rounded-full transition-all duration-300 animate-fadeIn delay-200 text-sm md:text-base">
               <p> contact us: +91-7012463882</p>
             </div>
           </section>
@@ -476,6 +477,13 @@ function Home() {
               </div>
             </div>
           </section>
+
+          {/* Footer Section */}
+          <footer className="bg-black text-white py-6 px-4 text-center border-t border-gray-800">
+            <p className="text-sm md:text-base tracking-wide font-medium">
+              ©️ 2026 Man.Ko | Powered by CULT CAFE. All Rights Reserved.
+            </p>
+          </footer>
         </div>
       </div>
     </>
